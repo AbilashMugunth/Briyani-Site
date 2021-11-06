@@ -1,0 +1,161 @@
+.specials {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("/images/1698004.jpg");
+}
+
+.mySwiper {
+  width: 80vw;
+  height: 30vh;
+  // background: red;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  font-weight: 700;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide span {
+  background-color: #ea811d;
+  padding: 0.2rem 0.4rem;
+  color: #000;
+}
+
+.slide-1 {
+  background-image: url("/images/starters/panner tika.jpeg");
+}
+
+.slide-2 {
+  background-image: url("/images/starters/chick wings.jpg");
+}
+
+.slide-3 {
+  background-image: url("/images/most-wanted/South-Indian-chicken-biryani.jpg");
+}
+
+.slide-4 {
+  background-image: url("/images/non-veg/egg-biryani-3-1.jpg");
+}
+
+.slide-5 {
+  background-image: url("/images/veg/1103_paneer_biryani_solo.jpg");
+}
+
+.slide-6 {
+  background-image: url("/images/most-wanted/dindugal.jpeg");
+}
+/////////////////////////////////////////@at-root
+.back-image-container {
+  background-image: url("/images/mid1-bb.jpg");
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  align-content: space-evenly;
+  margin: 2rem 0;
+  padding: 5rem 0;
+  background-attachment: fixed;
+
+  .back-image-text {
+    font-size: 1.8rem;
+    width: 80vw;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 900;
+  }
+
+  .back-order-btn {
+    padding: 0.4rem 0.5rem;
+    background-color: #ea811d;
+    width: 10rem;
+    text-align: center;
+
+    &:hover {
+      background-color: #000;
+      color: #ea811d;
+      border: 1px solid #ea811d;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .back-image-text {
+      font-size: 1.4rem;
+    }
+  }
+  @media (max-width: 468px) {
+    .back-image-text {
+      font-size: 1rem;
+    }
+  }
+}
+
+.features-container {
+  margin: 5rem 0;
+}
+
+.features-container > h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.features-container p {
+  text-align: center;
+  font-size: 1.2rem;
+  // margin-bottom: 2rem;
+}
+.features-boxes {
+  // height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-box {
+  margin: 1rem;
+}
+
+@media (max-width: 900px) {
+  .feature-box {
+    img {
+      width: 12rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-box {
+    img {
+      width: 10rem;
+    }
+  }
+}

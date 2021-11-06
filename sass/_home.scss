@@ -1,0 +1,223 @@
+///////////////////////////////////
+
+.home {
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  background-image: linear-gradient(
+      90deg,
+      rgba(80, 65, 38, 0.7) 0%,
+      rgba(24, 19, 17, 0.7) 50.7%,
+      transparent 49.3%
+    ),
+    url("/images/wp4629227-biryani-wallpapers.jpg");
+
+  .order-button-container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .order-button {
+    font-size: 2rem;
+    border: none;
+    padding: 1.3rem 2.5rem;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+  }
+}
+////////////////////
+.cart-container:hover {
+  background-color: #000;
+  #open-btn {
+    color: #ea811d;
+  }
+  .cart {
+    background-color: #ea811d;
+  }
+}
+.cart-container {
+  position: fixed;
+  padding: 1rem;
+  bottom: 25px;
+  right: 20px;
+  width: 6rem;
+  background-color: #ea811d;
+  z-index: 20;
+  color: #ffff;
+  cursor: pointer;
+
+  .cart {
+    text-align: center;
+    background-color: #000;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+.homeSwiper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.nav {
+  width: 100vw;
+  background-image: url(/images/1698004.jpg);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  position: fixed;
+  z-index: 10;
+
+  &-logo {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .nav-logo span:first-child {
+    font-size: 3rem;
+    color: #ea811d;
+    vertical-align: baseline;
+  }
+
+  .nav-logo span:nth-child(2) {
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  .nav-logo span:nth-child(3) {
+    font-size: 2rem;
+    color: #ea811d;
+  }
+
+  .burger-menu {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+
+  &-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+    #open-btn {
+      cursor: pointer;
+      margin-right: 0.5rem;
+    }
+
+    &-item {
+      padding: 0 1.5rem;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s;
+    }
+    &-item:hover {
+      color: #ea811d;
+    }
+  }
+}
+
+.btn {
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(black, 0.2);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+    color: black;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-logo {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    height: 80vh;
+
+    .order-button-container {
+      height: 80vh;
+    }
+  }
+
+  .nav {
+    justify-content: space-between;
+    padding: 1rem;
+    &-logo {
+      font-size: 2rem;
+    }
+
+    &-list {
+      &-item {
+        padding: 0 0.5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .home .order-button {
+    font-size: 1.4rem;
+    padding: 0.7rem 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    &-logo {
+      font-size: 1.5rem;
+    }
+
+    &-list {
+      &-item {
+        padding: 0 0.3rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .nav-list.show {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 2vh;
+    padding-right: 5vw;
+    padding-left: 4vw;
+  }
+  .nav {
+    position: static;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .burger-menu {
+    margin-right: 1rem;
+  }
+
+  .order-button-container {
+    margin-top: -12vh;
+  }
+}
+
+@media (min-width: 600px) {
+  .burger-menu {
+    display: none;
+  }
+}

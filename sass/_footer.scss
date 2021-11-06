@@ -1,0 +1,86 @@
+footer {
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.social-container {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.feedback {
+  padding: 0.4rem 0.3rem;
+  background-color: #ea811d;
+  width: 10rem;
+  text-align: center;
+}
+
+.feedback:hover {
+  background-color: #000;
+  color: #ea811d;
+  border: 1px solid #ea811d;
+}
+
+.footer-container {
+  width: 98.5vw;
+  display: flex;
+  justify-content: space-around;
+  // align-items: center;
+  border: 2px solid #ea811d;
+  padding: 1rem;
+  padding-top: 2rem;
+
+  h3 {
+    color: #ea811d;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile {
+    margin: 1.5rem 0;
+
+    i {
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+.delivery-places ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.icons {
+  margin-top: 1.5rem;
+}
+
+.icons i:hover {
+  color: #ea811d;
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .delivery-places ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .delivery-places ul li {
+    margin-right: 1rem;
+  }
+}
+
+li::marker {
+  color: #ea811d;
+}

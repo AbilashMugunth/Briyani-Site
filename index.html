@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for Briyani</title>
+
+
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/color/96/000000/b.png"
+      type="image/x-icon"
+    />
+
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="/sass/compressed.css">
+  </head>
+  <body>
+    <!-- ///////////////////////////////////////////////////////// -->
+    <!-- header starts here -->
+
+    <div class="home" id="home">
+      <nav class="nav">
+        <div class="nav-logo">
+          <span>B</span>
+          <span>for</span>
+          <span>Briyani</span>
+        </div>
+        <i class="fas fa-bars burger-menu"></i>
+        <ul class="nav-list">
+          <a href="#home" class="nav-list-item">Home</a>
+          <a href="#menu" class="nav-list-item menu-open">Menu</a>
+          <a href="#contact" class="nav-list-item">Contact us</a>
+        </ul>
+      </nav>
+
+      <div class="cart-container">
+        <i class="fas fa-shopping-cart" id="open-btn"></i>
+        <span class="cart">0</span>
+      </div>
+
+      <div class="order-button-container">
+        <a href="#menu" class="btn order-button menu-open">order now</a>
+      </div>
+    </div>
+
+    <div class="swiper-container specials">
+      <h2 class="swiper-heading">TODAY's SPECIALS</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide-1"><span>pannertika</span></div>
+          <div class="swiper-slide slide-2"><span>chickwings</span></div>
+          <div class="swiper-slide slide-3"><span>Chettinad Chicken</span></div>
+          <div class="swiper-slide slide-4"><span>Egg Briyani</span></div>
+          <div class="swiper-slide slide-5"><span>Panner Briyani</span></div>
+          <div class="swiper-slide slide-6"><span>Dindugal Briyani</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="back-image-container">
+      <p class="back-image-text">
+        Welcome the aromatic fragrance of flavourful rice, authentic herbs and
+        spices with caramelized onions at your doorstep Place your order today
+      </p>
+      <a href="#menu" class="back-order-btn menu-open">Order now</a>
+    </div>
+
+    <!-- ////////////////////////////////////// -->
+
+    <!-- *! Tabs -->
+
+    <!-- *! Modal -->
+
+    <div id="modal-background">
+      <div id="modal" class="cart-modal">
+        <p class="empty-cart">Your cart is empty 😐</p>
+        <span id="close-btn">&times;</span>
+        <p class="modal-total-text">
+          Total:
+          <span class="grand-total">
+            <i class="fa fa-inr"></i>
+            0</span
+          >
+        </p>
+        <div class="modal-all-items"></div>
+      </div>
+    </div>
+
+    <div class="main-wrapper" id="menu">
+      <h2>MENU</h2>
+      <div class="tabs-container">
+        <a class="tab" data-tab="1">Starters</a>
+        <a class="tab" data-tab="2">Non Veg</a>
+        <a class="tab" data-tab="3">Mostwanted</a>
+        <a class="tab" data-tab="4">Veg Briyanis</a>
+        <a class="tab" data-tab="5">Desserts</a>
+      </div>
+
+      <div class="content content-1" data-content="1">
+        <div id="starters">
+          <div class="dish-header">
+            <div class="title">Starters</div>
+          </div>
+
+          <div class="dish-body">
+            <div class="dish-item">
+              <img
+                src="/images/starters/chick65.jpeg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="chick65" class="dish-name">Chicken 65</p>
+
+              <div class="price-container">
+                <p class="dish-price">120</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/starters/chicken-tikka.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="chicktikka" class="dish-name">Chicken tikka</p>
+
+              <div class="price-container">
+                <p class="dish-price">200</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/starters/fried chick.jpeg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="friedchick" class="dish-name">Fried Chicken</p>
+
+              <div class="price-container">
+                <p class="dish-price">150</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img src="/images/starters/kebab.jpg" class="dish-img" alt="" />
+              <p data-dish-name="chickkebab" class="dish-name">Chicken Kebab</p>
+
+              <div class="price-container">
+                <p class="dish-price">100</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/starters/chick wings.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="chickwings" class="dish-name">Chicken Wings</p>
+
+              <div class="price-container">
+                <p class="dish-price">110</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/starters/panner tika.jpeg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="pannertika" class="dish-name">Panner Tika</p>
+
+              <div class="price-container">
+                <p class="dish-price">75</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- *! \\\\\\\\\\\\\\\\\\\\\\\\\\\NON VEG BRIYANIS/////////////////////////////////// -->
+
+      <div class="content content-2" data-content="2">
+        <div id="todspl">
+          <div class="dish-header">
+            <div class="title">Non Veg</div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-item">
+              <img src="/images/non-veg/Chick 65.jpg" class="dish-img" alt="" />
+              <p data-dish-name="chick65bri" class="dish-name">
+                Chicken 65 Briyani
+              </p>
+
+              <div class="price-container">
+                <p class="dish-price">250</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/non-veg/chicken-biryani.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="chickbri" class="dish-name">Chicken Briyani</p>
+
+              <div class="price-container">
+                <p class="dish-price">200</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/non-veg/egg-biryani-3-1.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="eggbri" class="dish-name">Egg Briyani</p>
+
+              <div class="price-container">
+                <p class="dish-price">150</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img src="/images/non-veg/mutton.jpg" class="dish-img" alt="" />
+              <p data-dish-name="muttbri" class="dish-name">Mutton Briyani</p>
+
+              <div class="price-container">
+                <p class="dish-price">300</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img src="/images/non-veg/boneless.jpg" class="dish-img" alt="" />
+              <p data-dish-name="bonebri" class="dish-name">Boneless Briyani</p>
+
+              <div class="price-container">
+                <p class="dish-price">250</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- *! \\\\\\\\\\\\\\\\\\\\\\\\\\\MOST WANTED/////////////////////////////////// -->
+
+      <div class="content content-3" data-content="3">
+        <div id="moswan">
+          <div class="dish-header">
+            <div class="title">Mostwanted</div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-item">
+              <img
+                src="/images/most-wanted/hydrabad chick.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="hydrabri" class="dish-name">
+                Hydrabad Chicken
+              </p>
+
+              <div class="price-container">
+                <p class="dish-price">400</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/most-wanted/South-Indian-chicken-biryani.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="chettibri" class="dish-name">
+                Chettinad Chicken
+              </p>
+              <div class="price-container">
+                <p class="dish-price">350</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/most-wanted/lucknow.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="luckbri" class="dish-name">Lucknow Chicken</p>
+
+              <div class="price-container">
+                <p class="dish-price">400</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/most-wanted/Malbar-CHICKEN-BIRYANI-1.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="malbarbri" class="dish-name">
+                Malabar Chicken
+              </p>
+
+              <div class="price-container">
+                <p class="dish-price">450</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/most-wanted/thallesery.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="thallesery" class="dish-name">
+                Thallesery Chicken
+              </p>
+
+              <div class="price-container">
+                <p class="dish-price">500</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- *! \\\\\\\\\\\\\\\\\\\\\\\\\\\VEG BRIYANIS/////////////////////////////////// -->
+
+      <div class="content content-4" data-content="4">
+        <div id="briyanis">
+          <div class="dish-header">
+            <div class="title">Veg Briyanis</div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-item">
+              <img
+                src="/images/veg/1103_paneer_biryani_solo.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="paneerbri" class="dish-name">Paneer Briyani</p>
+
+              <div class="price-container">
+                <p class="dish-price">200</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/veg/Mushroom-Biryani-1-1025x1536.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="mushbri" class="dish-name">Mushroom Briyani</p>
+
+              <div class="price-container">
+                <p class="dish-price">200</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img src="/images/veg/soya.jpg" class="dish-img" alt="" />
+              <p data-dish-name="soyabri" class="dish-name">Soya Briyani</p>
+
+              <div class="price-container">
+                <p class="dish-price">150</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img src="/images/veg/veg briyani.jpg" class="dish-img" alt="" />
+              <p data-dish-name="vegbri" class="dish-name">Veg Briyani</p>
+
+              <div class="price-container">
+                <p class="dish-price">150</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/veg/hyderabadi-vegetable-dum-biryani-recipe.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="hydradum" class="dish-name">Hydrabad Dum</p>
+
+              <div class="price-container">
+                <p class="dish-price">300</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- *! \\\\\\\\\\\\\\\\\\\\\\\\\\\DESSERTS/////////////////////////////////// -->
+
+      <div class="content content-5" data-content="5">
+        <div id="desserts">
+          <div class="dish-header">
+            <div class="title">Desserts</div>
+          </div>
+          <div class="dish-body">
+            <div class="dish-item">
+              <img src="/images/desserts/gulab.jpeg" class="dish-img" alt="" />
+              <p data-dish-name="gulab" class="dish-name">Gulab</p>
+
+              <div class="price-container">
+                <p class="dish-price">20</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/desserts/Indian-Kulfi-Ice-Cream_EXPS_TOHJJ20_242404_E02_05_9b.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="kulfi" class="dish-name">Kulfi</p>
+
+              <div class="price-container">
+                <p class="dish-price">30</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/desserts/Laddu_Sweet.jpeg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="laddu" class="dish-name">Laddu</p>
+
+              <div class="price-container">
+                <p class="dish-price">15</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="/images/desserts/rasgulla-indian-dessert.jpg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="rasagulla" class="dish-name">Rasagulla</p>
+
+              <div class="price-container">
+                <p class="dish-price">30</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+
+            <div class="dish-item">
+              <img
+                src="../images/desserts/vannila.jpeg"
+                class="dish-img"
+                alt=""
+              />
+              <p data-dish-name="vannila" class="dish-name">Vanilla</p>
+
+              <div class="price-container">
+                <p class="dish-price">20</p>
+                <button class="add">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ////////////////////////////////// -->
+    <div class="features-container">
+      <h2>WHAT MAKES US DIFFERENT</h3>
+      <div class="features-boxes">
+        <div class="feature-box">
+          <img src="/images/specials/naz-icons-new__5.png" alt="" />
+        </div>
+        <div class="feature-box">
+          <img src="/images/specials/naz-icons-new__1.png" alt="" />
+        </div>
+        <div class="feature-box">
+          <img src="/images/specials/naz-icons-new__2.png" alt="" />
+        </div>
+        <div class="feature-box">
+          <img src="/images/specials/naz-icons-new__3.png" alt="" />
+        </div>
+        <div class="feature-box">
+          <img src="/images/specials/naz-icons-new__4.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="catering">
+      <h2>CATERING</h2>
+
+      <div class="catering-container">
+        <div class="catering-text">
+          <h4>Looking to order in bulk for special occasions?</h4>
+
+          <ul>
+            <li>Make your events special and memorable.</li>
+            <li>
+              Make your guests talk about how great the food was for months to
+              come.
+            </li>
+            <li>Custom design a menu that matches your taste and style.</li>
+          </ul>
+          <p>
+            Our team can help you choose, craft, and deliver a feast that you
+            can brag about with confidence.
+          </p>
+
+          <a href="#" class="contact-us">Contact us</a>
+          
+          <i class="fas fa-phone"></i><span>9105589982</span>
+        </div>
+
+        <div class="catering-img-container">
+          <img class="catering-img" src="/images/catering.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ///////////////////////////////////// -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="take-aways">
+          <h3>Take aways</h3>
+          <li>402, Beach Rd, Fort Kochi, Kochi, Kerala</li>
+          <li>264, Koyambedu, Chennai, Tamil Nadu</li>
+
+          <div class="mobile">
+            <i class="fas fa-phone"></i><span>9405589982</span>
+            <i class="fas fa-phone"></i><span>9943256223</span>
+          </div>
+        </div>
+        <div class="delivery-places">
+          <h3>Cities we deliver</h3>
+          <ul>
+            <li>Chennai</li>
+            <li>Coimbatore</li>
+            <li>Salem</li>
+            <li>Kochi</li>
+            <li>Trivandrum</li>
+            <li>Calicut</li>
+          </ul>
+        </div>
+
+        <div class="social-container" id="contact">
+          <a class="feedback" href="#">Feedback</a>
+          <div class="icons">
+            <i class="fab fa-2x fa-instagram-square"></i>
+            <i class="fab fa-2x fa-twitter-square"></i>
+            <i class="fab fa-2x fa-facebook-square"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /////////////////////////////////////// -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="/main.js"></script>
+  </body>
+</html>

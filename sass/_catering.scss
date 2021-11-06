@@ -1,0 +1,88 @@
+.catering {
+  margin: 5rem 0 5rem 0.5rem;
+
+  h2 {
+    text-align: center;
+  }
+
+  P {
+    margin-bottom: 2rem;
+  }
+
+  .contact-us {
+    padding: 0.4rem 0.5rem;
+    background-color: #ea811d;
+    width: 10rem;
+    text-align: center;
+
+    &:hover {
+      background-color: #000;
+      color: #ea811d;
+      border: 1px solid #ea811d;
+    }
+  }
+}
+
+.catering-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 1rem;
+
+  .catering-text {
+    text-align: justify;
+    margin-right: 2rem;
+
+    h4 {
+      color: #ea811d;
+    }
+
+    ul {
+      margin: 0.5rem 0 2rem 0;
+      margin-left: 3rem;
+    }
+
+    i {
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+.catering-img {
+  width: 20rem;
+}
+
+@media (max-width: 768px) {
+  .catering-img {
+    margin-top: 2rem;
+  }
+
+  .catering {
+    &-text,
+    &-text p,
+    &-text li {
+      font-size: 0.9rem;
+    }
+    ul {
+      margin-left: 2rem;
+    }
+  }
+
+  .catering-container {
+    flex-direction: column;
+
+    .catering-text {
+      ul {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 468px) {
+  .catering-img {
+    width: 15rem;
+    margin-top: 2rem;
+  }
+}
