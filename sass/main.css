@@ -79,8 +79,8 @@ a:active {
 .cart-container {
   position: fixed;
   padding: 1rem;
-  bottom: 25px;
-  right: 20px;
+  bottom: 5px;
+  right: 5px;
   width: 6rem;
   background-color: #ea811d;
   z-index: 20;
@@ -959,7 +959,7 @@ footer h3 {
 
 @media (max-width: 600px) {
   .footer-container {
-    height: 55vh;
+    height: 60vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
