@@ -688,17 +688,31 @@ button:hover {
 
 .item-name {
   color: #0000;
-  width: 10rem;
+  width: 7rem;
   text-align: left;
 }
 
 .num {
+  border: 1px solid #ea811d;
   width: 3rem;
 }
 
 .empty-cart {
   position: absolute;
   top: 30%;
+}
+
+.modal-remove {
+  color: #fff;
+  background-color: #ea811d;
+  padding: 0.1rem 0.2rem;
+  border: none;
+}
+
+.modal-remove:hover {
+  color: #ea811d;
+  background-color: #000;
+  border: 1px solid #ea811d;
 }
 
 #close-btn {
@@ -777,6 +791,12 @@ button:hover {
   }
   .item-name {
     width: 6rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .item-name {
+    width: 4rem;
   }
 }
 

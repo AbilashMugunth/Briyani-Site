@@ -269,7 +269,7 @@ window.addEventListener("click", function (event) {
 
 let addBtns = document.querySelectorAll(".add");
 let quantityFields = document.getElementsByClassName("num");
-let delete_buttons = document.getElementsByClassName("uk-button-danger");
+let delete_buttons = document.getElementsByClassName("modal-remove");
 
 for (let i = 0; i < addBtns.length; i++) {
   addBtns[i].addEventListener("click", addToCart);
@@ -302,11 +302,9 @@ function addToCart(event) {
 
   itemContainer.innerHTML = `
   <span class = "item-name">${itemName}</span>
-  <span class="item-price">${rupeeIcon}<span>
-  ${itemPrice}</span></span>
   <span><input type = 'number' class = 'num' value = '1'></span>
   <span class="total-price">${rupeeIcon}<span>${itemPrice}</span></span>
-  <span><button class="uk-button-danger" type="button">Remove</button></span>`;
+  <span><button class="modal-remove" type="button">Remove</button></span>`;
 
   modalAllItems.append(itemContainer);
 
