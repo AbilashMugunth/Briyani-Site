@@ -382,12 +382,12 @@ a:active {
   background-color: #ea811d;
   width: 10rem;
   text-align: center;
+  border: 1px solid #ea811d;
 }
 
 .back-image-container .back-order-btn:hover {
   background-color: #000;
   color: #ea811d;
-  border: 1px solid #ea811d;
 }
 
 @media (max-width: 768px) {
@@ -579,7 +579,6 @@ a:active {
 }
 
 .tabs-container .active {
-  padding: 1.5rem 3rem;
   background-color: #0000;
   color: #ea811d;
   border: 2px solid #ea811d;
@@ -707,12 +706,12 @@ button:hover {
   background-color: #ea811d;
   padding: 0.1rem 0.2rem;
   border: none;
+  border: 1px solid #ea811d;
 }
 
 .modal-remove:hover {
   color: #ea811d;
   background-color: #000;
-  border: 1px solid #ea811d;
 }
 
 #close-btn {
@@ -827,12 +826,12 @@ button:hover {
   background-color: #ea811d;
   width: 10rem;
   text-align: center;
+  border: 1px solid #ea811d;
 }
 
 .catering .contact-us:hover {
   background-color: #000;
   color: #ea811d;
-  border: 1px solid #ea811d;
 }
 
 .catering-container {
@@ -922,12 +921,12 @@ footer h3 {
   background-color: #ea811d;
   width: 10rem;
   text-align: center;
+  border: 1px solid #ea811d;
 }
 
 .feedback:hover {
   background-color: #000;
   color: #ea811d;
-  border: 1px solid #ea811d;
 }
 
 .footer-container {

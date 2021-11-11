@@ -99,7 +99,6 @@
     border: 2px solid #ea811d;
   }
   .active {
-    padding: 1.5rem 3rem;
     background-color: #0000;
     color: #ea811d;
     border: 2px solid #ea811d;
@@ -207,13 +206,12 @@ button:hover {
   background-color: #ea811d;
   padding: 0.1rem 0.2rem;
   border: none;
+  border: 1px solid #ea811d;
 }
 
 .modal-remove:hover {
   color: #ea811d;
   background-color: #000;
-
-  border: 1px solid #ea811d;
 }
 
 #close-btn {
