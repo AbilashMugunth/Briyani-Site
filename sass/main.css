@@ -611,7 +611,8 @@ button:hover {
           transform: translate(-50%, -50%) scale(1);
 }
 
-#modal-background {
+#modal-background,
+#feed-modal-background {
   display: none;
   background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
@@ -622,12 +623,14 @@ button:hover {
   z-index: 1;
 }
 
-#modal {
+#modal,
+#feed-modal {
   z-index: 30;
   background-color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
+  overflow: scroll;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 40rem;
@@ -652,11 +655,68 @@ button:hover {
           animation-duration: 0.4s;
 }
 
-.modal-total-text {
+#feed-modal {
+  height: 30vh;
+  width: 30rem;
+  overflow: hidden;
+}
+
+#feed-modal h3 {
+  margin: 0;
+}
+
+#feed-modal form {
+  height: 45vh;
+  width: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#feed-modal form input,
+#feed-modal form textarea {
+  border: none;
+  -webkit-box-shadow: inset 0 0 2px;
+          box-shadow: inset 0 0 2px;
+  padding: 0.5rem;
+}
+
+#feed-modal form .feed-form-send {
+  width: 5rem;
+  padding: 0.2rem 0.4rem;
+  margin-top: 0.5rem;
+  background-color: #ea811d;
+  color: #fff;
+  border: 1px solid #ea811d;
+}
+
+#feed-modal form .feed-form-send:hover {
+  background-color: #000;
+  color: #ea811d;
+}
+
+#feed-modal #feed-close-btn {
+  color: #000;
+  cursor: pointer;
   position: absolute;
-  bottom: 2%;
-  right: 10%;
-  display: block;
+  right: 10px;
+  top: 0;
+  font-size: 2rem;
+}
+
+#feed-modal #feed-close-btn:hover {
+  color: red;
+}
+
+.modal-total-text {
+  padding-bottom: 1rem;
 }
 
 .modal-all-items {
@@ -772,6 +832,13 @@ button:hover {
   #modal {
     font-size: 1rem;
   }
+  #feed-modal {
+    width: 20rem;
+    padding: 0;
+  }
+  #feed-modal form {
+    width: 17rem;
+  }
   .num {
     width: 1.5rem;
   }
@@ -788,14 +855,17 @@ button:hover {
   .num {
     width: 2.5rem;
   }
-  .item-name {
-    width: 6rem;
-  }
 }
 
 @media (max-width: 350px) {
   .item-name {
-    width: 4rem;
+    width: 5rem;
+  }
+  #feed-modal {
+    width: 90vw;
+  }
+  #feed-modal form {
+    width: 85vw;
   }
 }
 

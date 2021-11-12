@@ -37,7 +37,6 @@
   </head>
   <body>
     <!-- ///////////////////////////////////////////////////////// -->
-    <!-- header starts here -->
 
     <div class="home" id="home">
       <nav class="nav">
@@ -88,7 +87,6 @@
 
     <!-- ////////////////////////////////////// -->
 
-    <!-- *! Tabs -->
 
     <!-- *! Modal -->
 
@@ -106,6 +104,8 @@
         <div class="modal-all-items"></div>
       </div>
     </div>
+
+    <!-- *! Tabs -->
 
     <div class="main-wrapper" id="menu">
       <h2>MENU</h2>
@@ -592,10 +592,29 @@
             <li>Trivandrum</li>
             <li>Calicut</li>
           </ul>
+          
         </div>
 
+           <!-- *!FEEDBACK Modal -->
+
+    <div id="feed-modal-background">
+      <div id="feed-modal">
+        <h3>Feedback</h3>
+        <span id="feed-close-btn">&times;</span>
+
+      <form action="https://formsubmit.co/abimugunthan2000@gmail.com" method="POST">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="hidden" name="_next" value="thanks.html">
+        <!-- <input type="hidden" name="_captcha" value="false"> -->
+        <textarea cols="10" rows="3" placeholder="Your Feedback" required></textarea>
+        <button class="feed-form-send" type="submit">Send</button>
+      </form>
+      </div>
+    </div>
+
         <div class="social-container" id="contact">
-          <a class="feedback" href="#">Feedback</a>
+          <button class="feedback">Feedback</button>
           <div class="icons">
             <i class="fab fa-2x fa-instagram-square"></i>
             <i class="fab fa-2x fa-twitter-square"></i>
@@ -607,7 +626,6 @@
     <!-- /////////////////////////////////////// -->
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
