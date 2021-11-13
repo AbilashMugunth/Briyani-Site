@@ -761,6 +761,10 @@ button:hover {
   top: 30%;
 }
 
+.item-price {
+  display: none;
+}
+
 .modal-remove {
   color: #fff;
   background-color: #ea811d;

@@ -337,6 +337,8 @@ function addToCart(event) {
 
   itemContainer.innerHTML = `
   <span class = "item-name">${itemName}</span>
+  <span class="item-price">${rupeeIcon}<span>
+  ${itemPrice}</span></span>
   <span><input type = 'number' class = 'num' value = '1'></span>
   <span class="total-price">${rupeeIcon}<span>${itemPrice}</span></span>
   <span><button class="modal-remove" type="button">Remove</button></span>`;
@@ -370,6 +372,7 @@ function totalCost(event) {
 
   quantity_parent = quantity.parentElement.parentElement;
   price_field = quantity_parent.getElementsByClassName("item-price")[0];
+  console.log(price_field);
   total_field = quantity_parent.getElementsByClassName("total-price")[0];
   price_field_content = price_field.innerText;
   console.log(price_field_content);
