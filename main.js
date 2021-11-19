@@ -7,6 +7,7 @@ orderOpen.forEach((btn) => {
     mainMenu.style.display = "block";
   });
 });
+
 /////////////////////////////////////////////////
 const burger = document.querySelector(".burger-menu");
 const navList = document.querySelector(".nav-list");
@@ -62,6 +63,7 @@ let swiper = new Swiper(".mySwiper", {
       slidesPerView: 2,
       spaceBetween: 20,
     },
+
     1024: {
       slidesPerView: 3,
       spaceBetween: 40,
@@ -104,6 +106,7 @@ for (let i = 0; i < incbtn.length; i++) {
     }
   });
 }
+
 for (let i = 0; i < decbtn.length; i++) {
   const button = decbtn[i];
 
@@ -300,6 +303,7 @@ window.addEventListener("click", function (event) {
     feedModalBackground.style.display = "none";
   }
 });
+
 // *! ///////////////////////////////////////////////////////////////
 
 let addBtns = document.querySelectorAll(".add");
@@ -396,6 +400,7 @@ function grandTotal() {
     all_prices = Number(all_total_fields[i].innerText);
     total += all_prices;
   }
+
   grand_total.innerHTML = `<i class="fa fa-inr"></i>` + total;
   grand_total.style.fontWeight = "bold";
   console.log(total);
