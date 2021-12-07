@@ -1,14 +1,3 @@
-//////////////////////////////////////////////////
-const mainMenu = document.querySelector(".main-wrapper");
-mainMenu.style.display = "none";
-orderOpen = document.querySelectorAll(".menu-open");
-orderOpen.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    mainMenu.style.display = "block";
-  });
-});
-
-/////////////////////////////////////////////////
 const burger = document.querySelector(".burger-menu");
 const navList = document.querySelector(".nav-list");
 
@@ -18,8 +7,6 @@ burger.addEventListener("click", () => {
 
 const dishPrice = document.querySelectorAll("main .dish-price");
 
-// console.log(dishPrice1);
-// console.log(dishPrice);
 dishPrice.forEach((e) => {
   e.insertAdjacentHTML("afterbegin", `<i class="fas fa-rupee-sign"></i>`);
   e.insertAdjacentHTML(
@@ -82,55 +69,6 @@ const qtytxt = document.querySelectorAll(".qty-txt");
 const qtyprev = document.querySelectorAll(".qty-prev");
 const priceprev = document.querySelectorAll(".price-prev");
 
-// console.log(dishPrice);
-let price = 100;
-
-for (let i = 0; i < incbtn.length; i++) {
-  const button = incbtn[i];
-
-  button.addEventListener("click", function (event) {
-    let buttonClicked = event.target;
-    console.log(buttonClicked, i);
-    let input = buttonClicked.parentElement.children[1];
-    let inputValue = input.value;
-    console.log(inputValue);
-    let newValue = parseInt(inputValue) + 1;
-    console.log(newValue);
-    input.value = newValue;
-
-    for (let i = 0; i < qtyprev.length; i++) {
-      const element = qtyprev[i];
-      // console.log(buttonClicked);
-      let prev = buttonClicked.parentElement.children[3];
-      prev.innerHTML = newValue;
-    }
-  });
-}
-
-for (let i = 0; i < decbtn.length; i++) {
-  const button = decbtn[i];
-
-  button.addEventListener("click", function (event) {
-    let buttonClicked = event.target;
-    console.log(buttonClicked, i);
-    let input = buttonClicked.parentElement.children[1];
-    let inputValue = input.value;
-    if (inputValue == 0) return;
-
-    console.log(inputValue);
-    let newValue = parseInt(inputValue) + -1;
-    console.log(newValue);
-    input.value = newValue;
-
-    for (let i = 0; i < qtyprev.length; i++) {
-      const element = qtyprev[i];
-      // console.log(buttonClicked);
-      let prev = buttonClicked.parentElement.children[3];
-      prev.innerHTML = newValue;
-    }
-  });
-}
-
 // *! DISH prices /////////
 
 const prices = {
@@ -175,9 +113,9 @@ function toastNotification() {
   Toastify({
     text: "Added to Cart",
     duration: 1000,
-    gravity: "top", // `top` or `bottom`
-    position: "right", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
+    gravity: "top",
+    position: "right",
+    stopOnFocus: true,
     style: {
       color: "#041c35",
       background: "#ea811d",
@@ -186,21 +124,13 @@ function toastNotification() {
 }
 
 const rupeeIcon = '<i class="fa fa-inr"></i>';
-
 const allDishPrices = document.querySelectorAll(".dish-price");
-
 allDishPrices.forEach((dish) => {
   dish.insertAdjacentHTML("afterbegin", `${rupeeIcon}`);
 });
 
 const priceEntries = Object.entries(prices);
-// console.log(priceEntries);
 const dishes = document.querySelectorAll(".dish-name");
-// const incbtn = document.querySelectorAll(".inc-btn");
-// const decbtn = document.querySelectorAll(".dec-btn");
-// const qtytxt = document.querySelectorAll(".qty-txt");
-// const qtyprev = document.querySelectorAll(".qty-prev");
-// const priceprev = document.querySelectorAll(".price-prev");
 
 // *! TAB SWITCHING functionality ////////
 
