@@ -290,21 +290,21 @@ function addToCart(event) {
   grandTotal();
 
   if (checkIfArrayIsUnique(arr) == false) {
-    console.log("fassdfksdake");
     [...nameCollection].forEach((element) => {
       if (element.innerText == itemName) {
         let numBox = element.parentElement.children[2].children[0];
         numBox.value++;
         let newValue = numBox.value;
         let eachTotal = element.parentElement.children[3].innerText;
-        element.parentElement.children[3].innerText = newValue * eachTotal;
+        element.parentElement.children[3].innerHTML = `${rupeeIcon}${
+          newValue * eachTotal
+        }`;
       }
     });
 
     console.dir(itemName);
     arr.pop();
 
-    // console.log(cartModal.lastElementChild);
     modalAllItems.lastElementChild.remove();
     return;
   }
