@@ -215,11 +215,25 @@ button:hover {
 }
 
 .modal-total-text {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   // position: absolute;
   // bottom: 2%;
   // right: 10%;
   // display: block;
+}
+
+#rzp-button1 {
+  padding: 0.4rem 0.7rem;
+  background-color: #ea811d;
+  color: #fff;
+  border: 1px solid #ea811d;
+  margin-left: 1rem;
+}
+
+#rzp-button1:hover {
+  padding: 0.4rem 0.7rem;
+  background-color: #000;
+  color: #ea811d;
 }
 
 .modal-all-items {

@@ -256,17 +256,21 @@ const emptyCart = document.querySelector(".empty-cart");
 const modalAllItems = document.querySelector(".modal-all-items");
 let cartNum = 0;
 
+// *! Adding to cart when add is clicked /////////////////////////
+
+let arr = [];
+
 function addToCart(event) {
   let incrementNum = ++cartNum;
   cart.innerHTML = incrementNum;
-  // console.log(event);
+
   let itemContainer = document.createElement("tr");
   itemContainer.classList.add("modal-each-item");
   let btn = event.target;
   let btnParent = btn.parentElement;
-  console.log(btnParent);
+
   let itemName = btnParent.parentElement.children[1].innerText;
-  console.log(itemName);
+
   let itemPrice = parseInt(btnParent.children[0].innerText);
 
   itemContainer.innerHTML = `
@@ -278,6 +282,32 @@ function addToCart(event) {
   <span><button class="modal-remove" type="button">Remove</button></span>`;
 
   modalAllItems.append(itemContainer);
+
+  arr.push(itemName);
+  console.log(arr);
+  const nameCollection = document.getElementsByClassName("item-name");
+  console.log(nameCollection);
+  grandTotal();
+
+  if (checkIfArrayIsUnique(arr) == false) {
+    console.log("fassdfksdake");
+    [...nameCollection].forEach((element) => {
+      if (element.innerText == itemName) {
+        let numBox = element.parentElement.children[2].children[0];
+        numBox.value++;
+        let newValue = numBox.value;
+        let eachTotal = element.parentElement.children[3].innerText;
+        element.parentElement.children[3].innerText = newValue * eachTotal;
+      }
+    });
+
+    console.dir(itemName);
+    arr.pop();
+
+    // console.log(cartModal.lastElementChild);
+    modalAllItems.lastElementChild.remove();
+    return;
+  }
 
   for (let i = 0; i < quantityFields.length; i++) {
     quantityFields[i].value = 1;
@@ -297,6 +327,12 @@ function addToCart(event) {
   }
 
   grandTotal();
+}
+
+function checkIfArrayIsUnique(myArray) {
+  console.log(new Set(myArray).size);
+
+  return myArray.length === new Set(myArray).size;
 }
 
 // This function helps to multiply the quantity and the price
@@ -322,18 +358,19 @@ function totalCost(event) {
 function grandTotal() {
   let total = 0;
   let grand_total = document.querySelector(".grand-total");
-  console.log(grand_total);
-
+  // console.log(grand_total);
   all_total_fields = document.getElementsByClassName("total-price");
-  console.log(all_total_fields);
+  // console.log(all_total_fields);
+
   for (let i = 0; i < all_total_fields.length; i++) {
     all_prices = Number(all_total_fields[i].innerText);
     total += all_prices;
   }
 
-  grand_total.innerHTML = `<i class="fa fa-inr"></i>` + total;
+  grand_total.innerHTML = rupeeIcon + total;
   grand_total.style.fontWeight = "bold";
-  console.log(total);
+  // console.log(total);
+  return total;
 }
 
 function removeItem(event) {
@@ -346,4 +383,53 @@ function removeItem(event) {
   grandTotal();
   let decrementNum = --cartNum;
   cart.innerHTML = decrementNum;
+
+  for (var i = 0; i < arr.length; i++) {
+    console.log(arr);
+    if (
+      arr[i] ===
+      `${event.target.parentElement.parentElement.firstElementChild.innerHTML}`
+    ) {
+      arr.splice(i, 1);
+    }
+  }
 }
+
+// *! Razorpay ////////////////////////////////////////////////////
+
+let checkoutBtn = document.querySelector("#rzp-button1");
+checkoutBtn.addEventListener("click", (e) => {
+  console.dir(e.target.previousElementSibling.innerText);
+  let totalValue = e.target.previousElementSibling.innerText;
+
+  var options = {
+    key: "rzp_test_yw82UVdqb63LLR",
+    amount: totalValue * 100,
+    currency: "INR",
+    name: "B for Briyani",
+    description: "Bill",
+    image:
+      "https://thumbs.dreamstime.com/b/vector-logo-building-materials-store-company-201109487.jpg",
+    handler: function (response) {
+      alert(response.razorpay_payment_id);
+      alert(response.razorpay_order_id);
+      alert(response.razorpay_signature);
+    },
+    prefill: {
+      name: "Abilash",
+      email: "abimugunthan2000@gmail.com",
+      contact: "9943167123",
+    },
+    notes: {
+      address: "Razorpay Corporate Office",
+    },
+    theme: {
+      color: "#ea811d",
+    },
+  };
+
+  var rzp1 = new Razorpay(options);
+
+  rzp1.open(totalValue);
+  e.preventDefault();
+});
