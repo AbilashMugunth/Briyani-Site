@@ -408,8 +408,7 @@ checkoutBtn.addEventListener("click", (e) => {
     currency: "INR",
     name: "B for Briyani",
     description: "Bill",
-    image:
-      "https://thumbs.dreamstime.com/b/vector-logo-building-materials-store-company-201109487.jpg",
+    image: "/images/catering.jpg",
     handler: function (response) {
       alert(response.razorpay_payment_id);
       alert(response.razorpay_order_id);
